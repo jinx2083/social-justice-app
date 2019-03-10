@@ -11,11 +11,11 @@
   
   <div class="search">
     <form action="">
-      Country: <input type="text" name="country">
+      Country: <input type="text" id="country">
     </form>
     <div>
       <span>Priority: </span>
-      <select name="search-priority">
+      <select id="search-filter">
         <option value="low">Low</option>
         <option value="middle">Medium</option>
         <option value="high">High</option>
@@ -23,7 +23,7 @@
       </select>
     </div>  
     </br>
-    <button type="button" onclick="searchUser()">Search </button>
+    <button type="button" onclick="search()">Search </button>
   </div>
 </div>
 

@@ -73,28 +73,24 @@ $(document).ready(function() {
   getUsers();
 })
 
-function searchUser(){
-  var userSelected = $('#selUser').val();
-  
-  if (userSelected != 0){
-    getPosts("?userId=" + userSelected);
-  }
-  else{
-    getPosts("");
-  }
-}
-
-/*allow user to share post by creating URL link to copy 
- * implement this function if we have time 
- * @ return url link for post 
+/** allow user to share post by creating URL link to copy 
+ *  implement this function if we have time 
+ *  @return url link for post 
  */
 function share(){
 
 }
 
-$('select[name="search-filter"]').change(function(){
-  
-  if ($(this).val() == "2")
-      alert("call the do something function on option 2");
-  
-});
+/** 
+ * search for the appropriate information from the provided data 
+ * @return post with correct filter 
+ */
+function search(){
+  var country = document.getElementById("country");
+  var priority = document.getElementById("search-filter");
+
+  if ( country != 0)
+    getPosts ( "country="+country , "priority="+priority);
+  else
+  getPosts ( "country=all" , "priority="+priority);
+}
