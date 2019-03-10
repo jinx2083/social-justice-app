@@ -90,8 +90,16 @@ function search(){
   var priority = document.getElementById("search-filter");
   alert("search");
 
-  if ( country != 0)
-    getPosts ( "?country="+country , "priority="+priority);
-  else
-  getPosts ( "?country=all" , "priority="+priority);
+  //if ( country != 0)
+  //  getPosts ( "?country="+country , "priority="+priority);
+  //else
+  //getPosts ( "?country=all" , "priority="+priority);
+
+  var ref = firebase.database().ref();
+
+  ref.on("value", function(snapshot) {
+    console.log(snapshot.val());
+  }, function (error) {
+    console.log("Error: " + error.code);
+  });
 }
