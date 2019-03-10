@@ -92,3 +92,9 @@ function share(){
 
 }
 
+$('select[name="search-filter"]').change(function(){
+  
+  if ($(this).val() == "2")
+      alert("call the do something function on option 2");
+  
+});

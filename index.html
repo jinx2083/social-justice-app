@@ -1,6 +1,7 @@
 <html>
 <head>
 <script src="function.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <link rel="stylesheet" href="main.css">
 </head> 
 <body>
@@ -8,11 +9,20 @@
 <div>
   <h1 class="title"> Filters </h1>
   
-  <div class="byUser">
-    <span class="title">All post by User : </span>
-    <select id="selUser">
-      <option value=0>All</option>
-    </select>
+  <div class="search">
+    <form action="">
+      Country: <input type="text" name="country">
+    </form>
+    <div>
+      <span>Priority: </span>
+      <select name="search-priority">
+        <option value="low">Low</option>
+        <option value="middle">Medium</option>
+        <option value="high">High</option>
+        <option value="all"selected="selected">All</option>
+      </select>
+    </div>  
+    </br>
     <button type="button" onclick="searchUser()">Search </button>
   </div>
 </div>
