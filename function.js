@@ -1,6 +1,7 @@
 
   var getData = [];
   var usersList = [];
+  
 
 function status(response) {
   //Check Promise
@@ -82,3 +83,12 @@ function searchUser(){
     getPosts("");
   }
 }
+
+/*allow user to share post by creating URL link to copy 
+ * implement this function if we have time 
+ * @ return url link for post 
+ */
+function share(){
+
+}
+
