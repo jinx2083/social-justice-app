@@ -1,21 +1,24 @@
 <!DOCTYPE html>
+<html>
 <head>
   <meta name = "author" content = "Michelle Le"/>
 <meta charset = "UTF-8"/>
 <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
 
 
+ <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
 <! Links to the font>
 <link rel = "stylesheet" href = "https://fonts.googleapis.com/css?family=Asap+Condensed">
 
  <! Links the CSS document for the format of the entire website >	
  <link rel="stylesheet" href="main.css">
-<script src="createPost.js"></script>
+<script src="Post.js"></script>
 <! Links the icons library>
 <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
 </head>
 
-
+<body>
 <div class="wrap">
   <div><h1 class="title">Create a New Post</h1></div>
   <p class="Create">
@@ -45,6 +48,21 @@
             <input type="text" id="body" class="postBody" name="body" placeholder="Click here to enter text" 
             required="required"/>   
             </fieldset>
-    <button type="button" onclick="create" >Submit</button>
+    <button type="button" onclick="create()" >Submit</button>
   </p>
 </div>
+  <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDEpxYWtprchNmAf0o9RxUFiAxn_TWJyVg",
+      authDomain: "social-justice-app-cmdf.firebaseapp.com",
+      databaseURL: "https://social-justice-app-cmdf.firebaseio.com",
+      projectId: "social-justice-app-cmdf",
+      storageBucket: "social-justice-app-cmdf.appspot.com",
+      messagingSenderId: "871147209128"
+    };
+    firebase.initializeApp(config);
+  </script>
+</body>
+</html>
