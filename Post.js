@@ -1,25 +1,35 @@
 var date = new Date();
+//var unique_id = 0;
+  
 
 function create(){
-    var title = document.getElementById("title");
-    var country = document.getElementById("country");
-    var priority = document.getElementById("priority");
-    var comment = document.getElementById("body");
+    //var firebase = app_firebase;
+    //console.log(document);
+    //IDGenerator();
+    var title = document.getElementById("title").value;
+    //console.log(title);
+    var cty = document.getElementById("country").value;
+    //console.log(cty);
+    var prt = document.getElementById("priority").value;
+    //console.log(prt);
+    var cmt = document.getElementById("body").value;
+    //console.log(cmt);
   
-    var post = firebase.database().ref("post/");
-    var unique_id = uuidv1();
-    post.set ({
-    unique_id: {
-         comment:comment,
-         country: country,
+    var post = firebase.database().ref();
+    //const uuidv1 = require("uuid/v1");
+    //var unique_id = uuidv1();
+    post.update ({
+        id: {
+         comment:cmt,
+         country: cty,
          header: title,
          like: 0,
-         priority: priority,
+         priority: prt,
          URL: null,
       },
    });
 
-   alert ( "finish");
+   //alert ( "finish");
   }
 class Post {
     constructor() { // string, string
