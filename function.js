@@ -97,46 +97,37 @@ function share(){
  * @return post with correct filter 
  */
 function search(){
-  var country = document.getElementById("country");
-  var priority = document.getElementById("search-filter");
-  var postList = [];
+  var country = document.getElementById("country").value;
+  var priority = document.getElementById("search-filter").value;
+  console.log(priority);
+  var result = []; //list of valid posts
   alert("search");
-
-  //if ( country != 0)
-  //  getPosts ( "?country="+country , "priority="+priority);
-  //else
-  //getPosts ( "?country=all" , "priority="+priority);
-
   var ref = firebase.database().ref("posts");
   var postList = new Promise(function(fulfill, reject) {
     ref.on("value", function(snapshot) {
-      fulfill(snapshot.val());
-      //console.log("country" + snapshot.val().country);
-      //console.log("priority" + snapshot.val().priority);
+      console.log(snapshot.val());
+      snapshot.forEach(function(post) {
+        if(post.val().country == country && isPriority(priority, post.val().priority)) {
+          result.push(post.val());
+        }
+      });
+      console.log(result);
+      fulfill(result);
     }, function (error) {
       reject("Error: " + error.code);
     });
-  }).then(function(postList) {
-
-    var result = filter(country, postList);
-    console.log("result "+result);
-  });  
-}
-
-
-function filter(query, postList){
-  var result = []; //list of valid posts
-  for (post in postList) {
-    console.log("post "+post);
-    //console.log("country" + post.country);
-    //console.log("priority" + post.priority);
-    if (post.country == query) {
-      result.push(post.val);
-    }
-  }
+  }); 
+postList.then(function(result) {
   return result;
+});
 }
 
+function isPriority(priority, postPriority) {
+  if (priority == "all"){
+    return true;
+  }
+  return priority == postPriority;
+}
 function updateResult(){
   
 }
