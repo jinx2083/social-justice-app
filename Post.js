@@ -14,7 +14,6 @@ function create(){
     //console.log(prt);
     var cmt = document.getElementById("body").value;
     //console.log(cmt);
-  
     var post = firebase.database().ref();
     //const uuidv1 = require("uuid/v1");
     //var unique_id = uuidv1();
@@ -28,7 +27,7 @@ function create(){
          URL: null,
       },
    });
-
+   console.log(firebase.database);
    //alert ( "finish");
   }
 class Post {
