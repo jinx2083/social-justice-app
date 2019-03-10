@@ -137,3 +137,7 @@ function filter(query, postList){
   }
   return result;
 }
+
+function updateResult(){
+  
+}
