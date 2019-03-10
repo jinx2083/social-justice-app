@@ -90,3 +90,14 @@ a:link {
 }
 
 #create a { color: white !important; } 
+
+#counter1 {
+	margin: 5px;
+}
+
+#counter1 p {
+	float: right;
+	padding-left: 5px;
+	padding-bottom: 0px;
+	font-size: 12px;
+}

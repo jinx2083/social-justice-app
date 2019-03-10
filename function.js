@@ -67,11 +67,10 @@ function getPosts(option){
   });
 }
 
-/* $(document).ready(function() {
+ $(document).ready(function() {
   //Get Post On Document Ready
-  getUsers();
-  printSocialMedia();
-}) */
+  document.getElementById("showCounts").innerHTML = localStorage.clickcount;
+});
 
 /* function printSocialMedia(){
   document.getElementById('social').innerHTML = 

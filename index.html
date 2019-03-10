@@ -1,8 +1,9 @@
 <html>
 <head>
   <title>Social Justice</title>
-  <script src="function.js"></script>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="function.js"></script>
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -51,17 +52,18 @@
               <p class="heading">
                   Help.
               </p>
-              <p class="data">
+              <div class="data">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
                   et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                   ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                   nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
                   id est laborum
-              </p>
-            <p>
-            <div id="showCounts"></div>
-            <button id='counter1' onclick="likes()" type="button"><i class="fa fa-heart-o"></i></button>
-            </p>
+              </div>
+
+              <div id="likes">
+                <button id='counter1' onclick="likes()" type="button"><i class="fa fa-heart-o"></i><p id="showCounts"></p></button>
+              </div>
+            </div>
           </div>
           <div class="post">
               <p class="heading">
