@@ -68,10 +68,10 @@ function getPosts(option){
   });
 }
 
-$(document).ready(function() {
+//$(document).ready(function() {
   //Get Post On Document Ready
-  getUsers();
-})
+  //getUsers();
+//})
 
 /** allow user to share post by creating URL link to copy 
  *  implement this function if we have time 
