@@ -3,6 +3,7 @@
   <title>Social Justice</title>
   <script src="function.js"></script>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="main.css">
 </head> 
 <body>
@@ -29,7 +30,7 @@
 </div>
 
   <div class="wrap">
-    <script>
+    		<script>
 		function likes() {
 		  if (typeof(Storage) !== "undefined") {
 			if (localStorage.clickcount) {
@@ -40,7 +41,7 @@
 			document.getElementById("showCounts").innerHTML = localStorage.clickcount;
 		  }
 		}
-	  </script>
+	  	</script>
     <div><h1 class="title">Posts</h1></div>
     <button type="button" onclick="create()"><a href="createForm.html">Create Post</a></button>
       <div class="posts">
