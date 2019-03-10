@@ -2,9 +2,17 @@ body{
 	font: 12px Arial,Tahoma,Helvetica,FreeSans,sans-serif;
 	text-transform: inherit;
 	color: #333;
-	background: #e7edee;
+	background: #eeefea;
 	width: 100%;
 }
+
+websiteName{
+	font-weight:1000;
+	font-size: 300%;
+	text-transform: uppercase;
+	color: #feb29b;
+}
+
 .wrap{
 	width: 720px;
 	margin: 15px auto;
@@ -15,18 +23,40 @@ body{
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 }
+
 .title, .userName {
-  font-weight:700;
+	margin-top: 2px;
+	font-weight:700;
+	color: #527590;
 }
 
 .post {
-  border-bottom: 1px solid black;
-  padding-bottom: 5px;
+	border: 2px solid #deedf2;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 10px;
 }
 
-.post .title{
-  font-style:italic;
+.post .heading {
+	font-weight: bold;
+	font-size: large;
+	color: #72cec1;
+	padding-bottom: 0px;
+	margin-bottom: 5px;
 }
-.post .body{
-  margin-top:5px;
+
+.post .data{
+	margin-top:0px;
 }
+
+.commentSection {
+	margin-left: 10px;
+}
+
+.comment {
+	background: #deedf2;
+	padding: 10px;
+	border-radius: 15px;
+	margin: 5px;
+}
+
