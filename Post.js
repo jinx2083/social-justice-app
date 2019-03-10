@@ -1,14 +1,30 @@
 var date = new Date();
-const priority = new Enumeration({
-    low: 1,
-    medium: 2,
-    high: 3,
-  });
 
+function create(){
+    var title = document.getElementById("title");
+    var country = document.getElementById("country");
+    var priority = document.getElementById("priority");
+    var comment = document.getElementById("body");
+  
+    var post = firebase.database().ref("post/");
+    var unique_id = uuidv1();
+    post.set ({
+    unique_id: {
+         comment:comment,
+         country: country,
+         header: title,
+         like: 0,
+         priority: priority,
+         URL: null,
+      },
+   });
+
+   alert ( "finish");
+  }
 class Post {
     constructor() { // string, string
         const uuidv1 = require('uuid/v1');
-        this.id = uuidv1(); // unique id
+        this.id = uuidv1(); // unique id, later
         this.user;
         this.country;
         this.priority;
@@ -35,3 +51,4 @@ class Post {
     }
 
 }
+
