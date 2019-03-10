@@ -68,10 +68,23 @@ function getPosts(option){
   });
 }
 
-//$(document).ready(function() {
+$(document).ready(function() {
   //Get Post On Document Ready
-  //getUsers();
-//})
+  getUsers();
+  printSocialMedia();
+})
+
+/* function printSocialMedia(){
+  document.getElementById('social').innerHTML = 
+(<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+  <a class="a2a_button_facebook"></a>
+  <a class="a2a_button_twitter"></a>
+  <a class="a2a_button_linkedin"></a>
+  <a class="a2a_button_reddit"></a>
+  <a class="a2a_button_facebook_messenger"></a>
+  <a class="a2a_button_flipboard"></a>
+  <a class="a2a_button_skype"></a>);
+} */
 
 /** allow user to share post by creating URL link to copy 
  *  implement this function if we have time 
