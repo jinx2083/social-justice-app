@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+  <meta name = "author" content = "Michelle Le"/>
+<meta charset = "UTF-8"/>
+<meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+
+
+<! Links to the font>
+<link rel = "stylesheet" href = "https://fonts.googleapis.com/css?family=Asap+Condensed">
+
+  <! Links the CSS document for the format of the entire website >	
+  <link rel = "stylesheet" type = "text/css" href = "css.css">
+
+<! Links the icons library>
+<link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+</head>
+
+
+<div class="wrap">
+  <div><h1 class="title">Create a New Post</h1></div>
+  <p class="Create">
+        <fieldset>
+        <legend>Heading</legend>
+            <input type="text" id="title" name="title" placeholder="Enter Heading" autofocus="autofocus"
+                  pattern="[A-Za-z]{2,50}" required="required"/></br>
+            <input type="hidden" id="session" name="session"/>
+        </fieldset>
+            <fieldset>
+            <legend>Enter Post Priority</legend>
+                <select size="1" name="priority" id="priority">
+                    <option value="low" selected="selected">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+            <legend>Enter body</legend>    
+            <input type="text" id="body" class="postBody" name="body" placeholder="Click here to enter text" 
+            required="required"/>   
+            </fieldset>
+    <button>Submit</button>
+  </p>
+</div>
