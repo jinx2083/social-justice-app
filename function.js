@@ -67,11 +67,11 @@ function getPosts(option){
   });
 }
 
-$(document).ready(function() {
+/* $(document).ready(function() {
   //Get Post On Document Ready
   getUsers();
   printSocialMedia();
-})
+}) */
 
 /* function printSocialMedia(){
   document.getElementById('social').innerHTML = 
@@ -108,16 +108,19 @@ function search(){
   //else
   //getPosts ( "?country=all" , "priority="+priority);
 
-  var ref = firebase.database().ref();
+  var ref = firebase.database().ref("posts");
   var postList = new Promise(function(fulfill, reject) {
     ref.on("value", function(snapshot) {
       fulfill(snapshot.val());
+      //console.log("country" + snapshot.val().country);
+      //console.log("priority" + snapshot.val().priority);
     }, function (error) {
       reject("Error: " + error.code);
     });
   }).then(function(postList) {
+
     var result = filter(country, postList);
-    console.log(result);
+    console.log("result "+result);
   });  
 }
 
@@ -125,7 +128,9 @@ function search(){
 function filter(query, postList){
   var result = []; //list of valid posts
   for (post in postList) {
-    console.log(post);
+    console.log("post "+post);
+    //console.log("country" + post.country);
+    //console.log("priority" + post.priority);
     if (post.country == query) {
       result.push(post.val);
     }
