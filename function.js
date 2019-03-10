@@ -118,7 +118,7 @@ function search(){
     });
   }); 
 postList.then(function(result) {
-  return result;
+  updateResult(result);
 });
 }
 
@@ -128,6 +128,26 @@ function isPriority(priority, postPriority) {
   }
   return priority == postPriority;
 }
-function updateResult(){
-  
+function updateResult(validPosts){
+  console.log("inside updateResults");
+  var result = "<div class=" + '\u0022' + "posts" + '\u0022' + ">";
+  for (var i = 0; i < validPosts.length; i++) {
+    result += "<div class=" + '\u0022' + "post" + '\u0022' + ">";
+    result += "<p class=" + '\u0022' + "heading" + '\u0022' + ">";
+    result += validPosts[i].header;
+    result += "</p>";
+    result += "<div class=" + '\u0022' + "data" + '\u0022' + ">";
+    result += validPosts[i].comment;
+    result += "</div>";
+    result += "<div id=" + '\u0022' +"likes" + '\u0022' + ">";
+    result += "<button id=" + '\u0022' +  "counter2" + '\u0022' + " onclick=" + '\u0022' + "likes()" + '\u0022'+ " type=" + '\u0022'+ "button" + '\u0022' + "><i class=" + '\u0022'+ "fa fa-heart-o" + '\u0022' + "></i></button>";
+    result += "</div>";
+    result += "</div>";
+
+    if (validPosts[i].commentSection != null) {
+    }
+  }
+  result += "</div>";
+  console.log(result);
+  document.getElementById("posts").innerHTML = result;
 }

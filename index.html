@@ -10,7 +10,7 @@
 </head> 
 <body>
 <div class="wrap"> 
-  <websiteName>Social Justice</websiteName>
+  <websiteName>Just/Ice Sys/Tem</websiteName>
   <button type="button" class="btn btn-danger" onclick="create()" id="create"><a href="createForm.html">Create Post</a></button>
   <h1 class="title"> Filters </h1>  
   <div class="search">
@@ -45,88 +45,87 @@
 		  }
 		}
 	  	</script>
-    <div><h1 class="title">Posts</h1></div>
+    <div class="posts" id="posts">
+        <h1 class="title"> Posts </h1>  
+      <div class="post">
+          <p class="heading">
+              Help.
+          </p>
+          <div class="data">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+              id est laborum
+          </div>
 
-      <div class="posts">
-          <div class="post">
-              <p class="heading">
-                  Help.
+          <div id="likes">
+            <button id='counter1' onclick="likes()" type="button"><i class="fa fa-heart-o"></i><p id="showCounts"></p></button>
+          </div>
+        </div>
+      </div>
+      <div class="post">
+          <p class="heading">
+              Oh no.
+            </p>
+            <p class="data">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+                id est laborum
+            </p>
+            <p>
+            <button id='counter2' onclick="likes()" type="button"><i class="fa fa-heart-o"></i></button>
+            </p>
+            <div class="commentSection">
+              <p class="comment">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+                id est laborum
               </p>
-              <div class="data">
+              <p class="comment">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
                   et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                   ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                   nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
                   id est laborum
-              </div>
-
-              <div id="likes">
-                <button id='counter1' onclick="likes()" type="button"><i class="fa fa-heart-o"></i><p id="showCounts"></p></button>
-              </div>
-            </div>
-          </div>
-          <div class="post">
-              <p class="heading">
-                  Oh no.
-                </p>
-                <p class="data">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-                    id est laborum
-                </p>
-            		<p>
-                <button id='counter2' onclick="likes()" type="button"><i class="fa fa-heart-o"></i></button>
-                </p>
-                <div class="commentSection">
-                  <p class="comment">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-                    id est laborum
-                  </p>
-                  <p class="comment">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-                      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                      ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                      nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-                      id est laborum
-                      <!-- AddToAny BEGIN -->
-                        <div id="social" class="a2a_kit a2a_kit_size_32 a2a_default_style" style="float:right ; padding: 10px">
-                        <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
-                        <a class="a2a_button_facebook"></a>
-                        <a class="a2a_button_twitter"></a>
-                        <a class="a2a_button_linkedin"></a>
-                        <a class="a2a_button_reddit"></a>
-                        <a class="a2a_button_facebook_messenger"></a>
-                        <a class="a2a_button_flipboard"></a>
-                        <a class="a2a_button_skype"></a>
-                        </div>
-                        <script async src="https://static.addtoany.com/menu/page.js"></script>
-                      <!-- AddToAny END -->
-                  </p>                  
-                  <textarea name="comment" class="comment" form="usrform" onkeypress="onTestChange()">Enter text here...</textarea>
-                  <script>
-                      function onTestChange() {
-                          var key = window.event.keyCode;
-                      
-                          // If the user has pressed enter
-                          if (key === 13) {
-                              // document.getElementById("textarea").value = document.getElementById("textarea").value + "\n*";
-                              console.Log(document.getElementById("textarea").value + "\n*");
-                              return false;
-                          }
-                          else {
-                              return true;
-                          }
+                  <!-- AddToAny BEGIN -->
+                    <div id="social" class="a2a_kit a2a_kit_size_32 a2a_default_style" style="float:right ; padding: 10px">
+                    <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                    <a class="a2a_button_facebook"></a>
+                    <a class="a2a_button_twitter"></a>
+                    <a class="a2a_button_linkedin"></a>
+                    <a class="a2a_button_reddit"></a>
+                    <a class="a2a_button_facebook_messenger"></a>
+                    <a class="a2a_button_flipboard"></a>
+                    <a class="a2a_button_skype"></a>
+                    </div>
+                    <script async src="https://static.addtoany.com/menu/page.js"></script>
+                  <!-- AddToAny END -->
+              </p>                  
+              <textarea name="comment" class="comment" form="usrform" onkeypress="onTestChange()">Enter text here...</textarea>
+              <script>
+                  function onTestChange() {
+                      var key = window.event.keyCode;
+                  
+                      // If the user has pressed enter
+                      if (key === 13) {
+                          // document.getElementById("textarea").value = document.getElementById("textarea").value + "\n*";
+                          console.Log(document.getElementById("textarea").value + "\n*");
+                          return false;
                       }
-                      </script>
-                </div>
-          </div>
+                      else {
+                          return true;
+                      }
+                  }
+                  </script>
+            </div>
       </div>
-    </div>
+  </div>
+</div>
 
 
   <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
