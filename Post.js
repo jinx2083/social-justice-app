@@ -7,7 +7,8 @@ const priority = new Enumeration({
 
 class Post {
     constructor() { // string, string
-        this.id = 0; // unique id, later
+        const uuidv1 = require('uuid/v1');
+        this.id = uuidv1(); // unique id, later
         this.user;
         this.country;
         this.priority;
@@ -15,6 +16,7 @@ class Post {
         this.data = "";
         this.numLikes = 0;
         this.timeStamp = date.now();
+        this.commentSec = new CommentSection(this.id);
     }
     
     createPost(heading, country, priority, data) {
