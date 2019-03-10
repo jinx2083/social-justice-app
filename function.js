@@ -88,9 +88,10 @@ function share(){
 function search(){
   var country = document.getElementById("country");
   var priority = document.getElementById("search-filter");
+  alert("search");
 
   if ( country != 0)
-    getPosts ( "country="+country , "priority="+priority);
+    getPosts ( "?country="+country , "priority="+priority);
   else
-  getPosts ( "country=all" , "priority="+priority);
+  getPosts ( "?country=all" , "priority="+priority);
 }
