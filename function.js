@@ -101,7 +101,7 @@ function search(){
   var priority = document.getElementById("search-filter").value;
   console.log(priority);
   var result = []; //list of valid posts
-  alert("search");
+  // alert("search");
   var ref = firebase.database().ref("posts");
   var postList = new Promise(function(fulfill, reject) {
     ref.on("value", function(snapshot) {
