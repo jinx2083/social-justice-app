@@ -1,4 +1,3 @@
-
   var getData = [];
   var usersList = [];
   
@@ -101,6 +100,7 @@ function share(){
 function search(){
   var country = document.getElementById("country");
   var priority = document.getElementById("search-filter");
+  var postList = [];
   alert("search");
 
   //if ( country != 0)
@@ -109,10 +109,26 @@ function search(){
   //getPosts ( "?country=all" , "priority="+priority);
 
   var ref = firebase.database().ref();
+  var postList = new Promise(function(fulfill, reject) {
+    ref.on("value", function(snapshot) {
+      fulfill(snapshot.val());
+    }, function (error) {
+      reject("Error: " + error.code);
+    });
+  }).then(function(postList) {
+    var result = filter(country, postList);
+    console.log(result);
+  });  
+}
 
-  ref.on("value", function(snapshot) {
-    console.log(snapshot.val());
-  }, function (error) {
-    console.log("Error: " + error.code);
-  });
+
+function filter(query, postList){
+  var result = []; //list of valid posts
+  for (post in postList) {
+    console.log(post);
+    if (post.country == query) {
+      result.push(post.val);
+    }
+  }
+  return result;
 }
