@@ -130,7 +130,8 @@ function isPriority(priority, postPriority) {
 }
 function updateResult(validPosts){
   console.log("inside updateResults");
-  var result = "<div class=" + '\u0022' + "posts" + '\u0022' + ">";
+  var result = "<h1 class=" + '\u0022' + "title" + '\u0022' + ">" + " Posts </h1>";  
+  result += "<div class=" + '\u0022' + "posts" + '\u0022' + ">";
   for (var i = 0; i < validPosts.length; i++) {
     result += "<div class=" + '\u0022' + "post" + '\u0022' + ">";
     result += "<p class=" + '\u0022' + "heading" + '\u0022' + ">";
