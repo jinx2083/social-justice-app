@@ -1,11 +1,16 @@
 var date = new Date();
-//var unique_id = 0;
+var unique_id = 0;
   
+function generate () {
+    // Math.random should be unique because of its seeding algorithm.
+    // Convert it to base 36 (numbers + letters), and grab the first 9 characters
+    // after the decimal.
+    unique_id =  '_' + Math.random().toString(36).substr(2, 9);
+  }
 
 function create(){
-    //var firebase = app_firebase;
-    //console.log(document);
-    //IDGenerator();
+ 
+    generate();
     var title = document.getElementById("title").value;
     //console.log(title);
     var cty = document.getElementById("country").value;
@@ -15,18 +20,17 @@ function create(){
     var cmt = document.getElementById("body").value;
     //console.log(cmt);
   
-    var post = firebase.database().ref();
-    //const uuidv1 = require("uuid/v1");
-    //var unique_id = uuidv1();
+    var post = firebase.database().ref("posts/"+unique_id);
+
     post.update ({
-        ID: {
+    
          comment:cmt,
          country: cty,
          header: title,
          like: 0,
          priority: prt,
          URL: null,
-      },
+    
    });
 
    alert ( "finish");
