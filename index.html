@@ -3,6 +3,7 @@
   <title>Social Justice</title>
   <script src="function.js"></script>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="main.css">
 </head> 
 <body>
@@ -29,6 +30,18 @@
 </div>
 
   <div class="wrap">
+    		<script>
+		function likes() {
+		  if (typeof(Storage) !== "undefined") {
+			if (localStorage.clickcount) {
+			  localStorage.clickcount = Number(localStorage.clickcount) + 1;
+			} else {
+			  localStorage.clickcount = 1;
+			}
+			document.getElementById("showCounts").innerHTML = localStorage.clickcount;
+		  }
+		}
+	  	</script>
     <div><h1 class="title">Posts</h1></div>
     <button type="button" onclick="create()"><a href="createForm.html">Create Post</a></button>
       <div class="posts">
@@ -43,6 +56,10 @@
                   nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
                   id est laborum
               </p>
+            <p>
+            <div id="showCounts"></div>
+            <button id='counter1' onclick="likes()" type="button"><i class="fa fa-heart-o"></i></button>
+            </p>
           </div>
           <div class="post">
               <p class="heading">
@@ -54,6 +71,9 @@
                     ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                     nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
                     id est laborum
+                </p>
+            		<p>
+                <button id='counter2' onclick="likes()" type="button"><i class="fa fa-heart-o"></i></button>
                 </p>
                 <div class="commentSection">
                   <p class="comment">
