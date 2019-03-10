@@ -33,8 +33,8 @@ function create(){
   }
 class Post {
     constructor() { // string, string
-        const uuidv1 = require('uuid/v1');
-        this.id = uuidv1(); // unique id, later
+        const uuidv1 = require("uuid/v1");
+        this.id = uuidv1(); // unique id
         this.user;
         this.country;
         this.priority;
