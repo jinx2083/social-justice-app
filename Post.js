@@ -19,7 +19,7 @@ function create(){
     //const uuidv1 = require("uuid/v1");
     //var unique_id = uuidv1();
     post.update ({
-        id: {
+        ID: {
          comment:cmt,
          country: cty,
          header: title,
@@ -29,7 +29,7 @@ function create(){
       },
    });
 
-   //alert ( "finish");
+   alert ( "finish");
   }
 class Post {
     constructor() { // string, string
